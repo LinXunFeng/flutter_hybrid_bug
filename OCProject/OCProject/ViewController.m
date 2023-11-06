@@ -8,10 +8,10 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "LXFFlutterViewController.h"
+#import "LXFEngineGroup.h"
+@import FlutterPluginRegistrant;
 
 @interface ViewController ()
-
-@property(nonatomic, strong) FlutterEngine *flutterEngine;
 
 @end
 
@@ -20,8 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.flutterEngine run];
-    
     UILabel *label = [UILabel new];
     [self.view addSubview:label];
     label.text = @"push flutter vc";
@@ -29,15 +27,11 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    LXFFlutterViewController *flutterVc = [[LXFFlutterViewController alloc] initWithEngine:self.flutterEngine nibName:nil bundle:nil];
+    FlutterEngine *engine = [LXFEngineGroup.sharedLXFEngineGroup.engineGroup makeEngineWithOptions:[FlutterEngineGroupOptions new]];
+    [GeneratedPluginRegistrant registerWithRegistry:engine];
+    
+    LXFFlutterViewController *flutterVc = [[LXFFlutterViewController alloc] initWithEngine:engine nibName:nil bundle:nil];
     [self.navigationController pushViewController:flutterVc animated:YES];
-}
-
-- (FlutterEngine *)flutterEngine {
-    if (!_flutterEngine) {
-        _flutterEngine = [[FlutterEngine alloc] initWithName:@"lxf"];
-    }
-    return _flutterEngine;
 }
 
 @end

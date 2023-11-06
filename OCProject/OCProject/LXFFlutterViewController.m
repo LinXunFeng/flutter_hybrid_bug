@@ -9,8 +9,6 @@
 
 @interface LXFFlutterViewController()
 
-@property(nonatomic, assign) BOOL isForbidFlutterResponseTouch;
-
 @end
 
 @implementation LXFFlutterViewController

@@ -53,6 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
+  void initState() {
+    debugPrint('flutter initState');
+    super.initState();
+  }
+
+  @override
   void dispose() {
     debugPrint('flutter dispose');
     super.dispose();

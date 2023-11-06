@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B01462230AC7A6895FDEA21 /* Pods_OCProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424C3479314C6F417C2E70C4 /* Pods_OCProject.framework */; };
+		BD59CD742AF8756C0000FAFE /* LXFEngineGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BD59CD732AF8756C0000FAFE /* LXFEngineGroup.m */; };
 		FDCE8E842805C07900958980 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCE8E832805C07900958980 /* AppDelegate.m */; };
 		FDCE8E872805C07900958980 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCE8E862805C07900958980 /* SceneDelegate.m */; };
 		FDCE8E8A2805C07900958980 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCE8E892805C07900958980 /* ViewController.m */; };
@@ -21,6 +22,9 @@
 /* Begin PBXFileReference section */
 		424C3479314C6F417C2E70C4 /* Pods_OCProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF16E6172B148319055B684 /* Pods-OCProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProject.release.xcconfig"; path = "Target Support Files/Pods-OCProject/Pods-OCProject.release.xcconfig"; sourceTree = "<group>"; };
+		BD59CD722AF8756C0000FAFE /* LXFEngineGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXFEngineGroup.h; sourceTree = "<group>"; };
+		BD59CD732AF8756C0000FAFE /* LXFEngineGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXFEngineGroup.m; sourceTree = "<group>"; };
+		BD59CD752AF877280000FAFE /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		D8961C508813DAF4D40580E8 /* Pods-OCProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProject.debug.xcconfig"; path = "Target Support Files/Pods-OCProject/Pods-OCProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FDCE8E7F2805C07900958980 /* OCProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCE8E822805C07900958980 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		FDCE8E812805C07900958980 /* OCProject */ = {
 			isa = PBXGroup;
 			children = (
+				BD59CD752AF877280000FAFE /* Singleton.h */,
 				FDCE8E822805C07900958980 /* AppDelegate.h */,
 				FDCE8E832805C07900958980 /* AppDelegate.m */,
 				FDCE8E852805C07900958980 /* SceneDelegate.h */,
@@ -101,6 +106,8 @@
 				FDCE8E902805C07A00958980 /* LaunchScreen.storyboard */,
 				FDCE8E932805C07A00958980 /* Info.plist */,
 				FDCE8E942805C07A00958980 /* main.m */,
+				BD59CD722AF8756C0000FAFE /* LXFEngineGroup.h */,
+				BD59CD732AF8756C0000FAFE /* LXFEngineGroup.m */,
 			);
 			path = OCProject;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 				FDCE8E8A2805C07900958980 /* ViewController.m in Sources */,
 				FDCE8E842805C07900958980 /* AppDelegate.m in Sources */,
 				FDCE8E952805C07A00958980 /* main.m in Sources */,
+				BD59CD742AF8756C0000FAFE /* LXFEngineGroup.m in Sources */,
 				FDCE8E872805C07900958980 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
